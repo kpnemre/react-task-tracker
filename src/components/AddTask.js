@@ -4,8 +4,6 @@ const AddTask = ({ onAdd }) => {
   const [text, setText] = useState("");
   const [day, setDay] = useState("");
   const [reminder, setReminder] = useState(false);
-  //   console.log(text, day, reminder);
-
   const onSubmit = useCallback((e) => {
     e.preventDefault();
     onAdd({ text, day, reminder });
@@ -51,5 +49,4 @@ const AddTask = ({ onAdd }) => {
     </form>
   );
 };
-
 export default React.memo(AddTask);
