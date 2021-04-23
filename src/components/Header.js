@@ -7,7 +7,7 @@ const Header = ({title, onAdd, showAdd}) => {
     // const onClick=()=>{
     //     console.log("emre")
     // }
-
+    console.log("Header: rendering")
     return (
         <header className="header">
 
@@ -34,4 +34,4 @@ Header.propTypes ={
 //      color:"red",
 //      backgroundColor:"black"
 //  }
-export default Header
+export default React.memo(Header);

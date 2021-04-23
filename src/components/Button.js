@@ -1,6 +1,7 @@
 import React from "react";
 
 const Button = ({ color, text, onClick}) => {
+  console.log("Button: rendering")
   return (
     <div>
       <button
@@ -14,4 +15,4 @@ const Button = ({ color, text, onClick}) => {
   );
 };
 
-export default Button;
+export default React.memo(Button);

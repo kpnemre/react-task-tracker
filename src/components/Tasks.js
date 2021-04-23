@@ -1,5 +1,5 @@
 import Task from "./Task";
-
+import React from 'react';
 // import React, {useState} from 'react';
 
 // const tasks =[
@@ -47,7 +47,7 @@ const Tasks = (props) => {
   //         "reminder": false
   //       }
   // ])
-
+  console.log("Tasks: rendering")
   return (
     <>
       {/* {props.tasks.map((task, index)=>(
@@ -66,4 +66,4 @@ const Tasks = (props) => {
   );
 };
 
-export default Tasks;
+export default React.memo(Tasks);

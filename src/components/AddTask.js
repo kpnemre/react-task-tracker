@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState("");
   const [day, setDay] = useState("");
   const [reminder, setReminder] = useState(false);
-//   console.log(text, day, reminder);
+  //   console.log(text, day, reminder);
 
-  const onSubmit=(e)=>{
-e.preventDefault()
-onAdd({text,day,reminder})
-setText('');
-setDay('');
-setReminder(false)
-  }
+  const onSubmit = useCallback((e) => {
+    e.preventDefault();
+    onAdd({ text, day, reminder });
+    setText("");
+    setDay("");
+    setReminder(false);
+  },[onAdd,day,text,reminder]);
+
+  console.log("AddTask: rendering");
   return (
     <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
@@ -50,4 +52,4 @@ setReminder(false)
   );
 };
 
-export default AddTask;
+export default React.memo(AddTask);

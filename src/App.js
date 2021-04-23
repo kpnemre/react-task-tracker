@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
@@ -31,23 +31,23 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const toogleReminder = (id) => {
+  const toogleReminder = useCallback((id) => {
     // console.log("id",id);
     setTasks(
       tasks.map((task) =>
         task.id === id ? { ...task, reminder: !task.reminder } : task
       )
     );
-  };
+  },[tasks]);
   // console.log(tasks.length);
-const onAddTask =(task)=>{
+const onAddTask =((task)=>{
 // console.log(task);
 const id = tasks.length + 1;
-console.log(id);
+// console.log(id);
 const newTask = {id, ...task}
-console.log(newTask);
+// console.log(newTask);
 setTasks([...tasks, newTask])
-}
+})
 
 // console.log(tasks);
   return (
