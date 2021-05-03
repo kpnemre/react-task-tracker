@@ -1,22 +1,16 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Doctors Appointment",
-      "day": "Feb 5th at 2:30pm",
-      "reminder": true
+      "text": "Go to Dentist",
+      "day": "21.05.2021",
+      "reminder": false,
+      "id": 1
     },
     {
-      "id": 2,
-      "text": "Meeting at School",
-      "day": "Feb 6th at 1:30pm",
-      "reminder": true
-    },
-    {
-      "text": "Go to bazaar",
-      "day": "Friday",
-      "reminder": true,
-      "id": 3
+      "text": "Read newspaper",
+      "day": "Every morning",
+      "reminder": false,
+      "id": 2
     }
   ]
 }
