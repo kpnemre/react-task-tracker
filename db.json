@@ -11,6 +11,12 @@
       "day": "Every morning",
       "reminder": false,
       "id": 2
+    },
+    {
+      "text": "Go to Library",
+      "day": "19.05.2021",
+      "reminder": true,
+      "id": 3
     }
   ]
 }
